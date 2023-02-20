@@ -101,24 +101,33 @@ public class CourseUnitPagerAdapter extends FragmentStateAdapter {
             unitFragment = CourseUnitOnlyOnYoutubeFragment.newInstance(minifiedUnit);
         } else if (config.isDiscussionsEnabled() && minifiedUnit instanceof DiscussionBlockModel) {
             unitFragment = CourseUnitDiscussionFragment.newInstance(minifiedUnit, courseData);
-//        } else if (!minifiedUnit.isMultiDevice()) {
+        } else if (!minifiedUnit.isMultiDevice()) {
 //            unitFragment = CourseUnitMobileNotSupportedFragment.newInstance(minifiedUnit, courseData.getCourse().isSelfPaced());
-//        } else if (minifiedUnit.getType() != BlockType.VIDEO &&
-//                minifiedUnit.getType() != BlockType.HTML &&
-//                minifiedUnit.getType() != BlockType.OTHERS &&
-//                minifiedUnit.getType() != BlockType.DISCUSSION &&
-//                minifiedUnit.getType() != BlockType.PROBLEM &&
-//                minifiedUnit.getType() != BlockType.OPENASSESSMENT &&
-//                minifiedUnit.getType() != BlockType.DRAG_AND_DROP_V2 &&
-//                minifiedUnit.getType() != BlockType.WORD_CLOUD &&
-//                minifiedUnit.getType() != BlockType.LTI_CONSUMER) {
+            minifiedUnit.setCourseId(courseData.getCourse().getId());
+            unitFragment = CourseUnitWebViewFragment.newInstance((HtmlBlockModel) minifiedUnit, courseData.getCourse().getName(), courseData.getMode(), courseData.getCourse().isSelfPaced());
+
+        } else if (minifiedUnit.getType() != BlockType.VIDEO &&
+                minifiedUnit.getType() != BlockType.HTML &&
+                minifiedUnit.getType() != BlockType.OTHERS &&
+                minifiedUnit.getType() != BlockType.DISCUSSION &&
+                minifiedUnit.getType() != BlockType.PROBLEM &&
+                minifiedUnit.getType() != BlockType.OPENASSESSMENT &&
+                minifiedUnit.getType() != BlockType.DRAG_AND_DROP_V2 &&
+                minifiedUnit.getType() != BlockType.WORD_CLOUD &&
+                minifiedUnit.getType() != BlockType.LTI_CONSUMER) {
 //            unitFragment = CourseUnitEmptyFragment.newInstance(minifiedUnit);
+            minifiedUnit.setCourseId(courseData.getCourse().getId());
+            unitFragment = CourseUnitWebViewFragment.newInstance((HtmlBlockModel) minifiedUnit, courseData.getCourse().getName(), courseData.getMode(), courseData.getCourse().isSelfPaced());
+
         } else if (minifiedUnit instanceof HtmlBlockModel) {
             minifiedUnit.setCourseId(courseData.getCourse().getId());
             unitFragment = CourseUnitWebViewFragment.newInstance((HtmlBlockModel) minifiedUnit, courseData.getCourse().getName(), courseData.getMode(), courseData.getCourse().isSelfPaced());
         }
         //fallback
         else {
+            minifiedUnit.setCourseId(courseData.getCourse().getId());
+            unitFragment = CourseUnitWebViewFragment.newInstance((HtmlBlockModel) minifiedUnit, courseData.getCourse().getName(), courseData.getMode(), courseData.getCourse().isSelfPaced());
+
 //            unitFragment = CourseUnitMobileNotSupportedFragment.newInstance(minifiedUnit, courseData.getCourse().isSelfPaced());
         }
 
