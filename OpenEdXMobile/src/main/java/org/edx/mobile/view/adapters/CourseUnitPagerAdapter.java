@@ -118,9 +118,9 @@ public class CourseUnitPagerAdapter extends FragmentStateAdapter {
             unitFragment = CourseUnitWebViewFragment.newInstance((HtmlBlockModel) minifiedUnit, courseData.getCourse().getName(), courseData.getMode(), courseData.getCourse().isSelfPaced());
         }
         //fallback
-//        else {
+        else {
 //            unitFragment = CourseUnitMobileNotSupportedFragment.newInstance(minifiedUnit, courseData.getCourse().isSelfPaced());
-//        }
+        }
 
         unitFragment.setHasComponentCallback(callback);
         fragments.add(unitFragment);
