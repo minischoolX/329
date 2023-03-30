@@ -14,7 +14,7 @@
     <!--  Primary 700 | Dark 700  -->
     <color name="primaryDarkColor">#008c9f</color>
     <!--  Primary 700 | Dark 700, Opacity 30  -->
-    <color name="primaryDarkColor_Opacity_30">#4D#008c9f</color>
+    <color name="primaryDarkColor_Opacity_30">#4D008c9f</color>
 
     <!--  Brand 500  -->
     <color name="secondaryBaseColor">#f0df0f</color>
