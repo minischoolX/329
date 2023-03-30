@@ -3,23 +3,23 @@
 
     <!--  ** edx Brand Colors ** -->
     <!--  ** Core Colors **  -->
-    <!--  Dark 200  -->
-    <color name="primaryXXLightColor">#fbf5bd</color>
+    <!--  Dark 200 -->
+    <color name="primaryXXLightColor">#7dd7e7</color>
     <!--  Primary 300 | Dark 300  -->
-    <color name="primaryXLightColor">#f8ee91</color>
+    <color name="primaryXLightColor">#49c7dc</color>
     <!--  Dark 400  -->
-    <color name="primaryLightColor">#f5e865</color>
+    <color name="primaryLightColor">#23bbd4</color>
     <!--  Primary 500 | Dark 500 | Elm  -->
-    <color name="primaryBaseColor">#f2e33f</color>
+    <color name="primaryBaseColor">#01b0cc</color>
     <!--  Primary 700 | Dark 700  -->
-    <color name="primaryDarkColor">#f0de06</color>
+    <color name="primaryDarkColor">#008c9f</color>
     <!--  Primary 700 | Dark 700, Opacity 30  -->
-    <color name="primaryDarkColor_Opacity_30">#4Df0de06</color>
+    <color name="primaryDarkColor_Opacity_30">#4D#008c9f</color>
 
     <!--  Brand 500  -->
-    <color name="secondaryBaseColor">#03c7e8</color>
+    <color name="secondaryBaseColor">#f0df0f</color>
     <!--  Brand 700  -->
-    <color name="secondaryDarkColor">#00a0b9</color>
+    <color name="secondaryDarkColor">#f0b600</color>
 
     <!--  Accent A Isotope Blue  -->
     <color name="accentAColor">#0f3a40</color>
